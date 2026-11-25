@@ -658,6 +658,7 @@ def ordenar_juegos(juegos: list[dict], criterio: str, ascendente: bool) -> list[
     Retorno:
     - list[dict]: nueva lista ordenada.
     """
+    # el burbujeo nunca modifica un diccionario. Solo reordena referencias, así que alcanza con la copia superficial y no hace falta deepcopy.
     copia = juegos.copy() #copia de la lista para poder reordenarla libremente sin modificar la lista original del sistema.
 
     for i in range(len(copia) - 1): #bubble sort(desde el primer elemento)
